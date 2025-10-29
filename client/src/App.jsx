@@ -7,7 +7,7 @@ import MainPage from './pages/MainPage'
 import MainLayout from './components/MainLayout'
 import Details from './pages/Details'
 import Checkout from './pages/Checkout'
-import Confirmation from './pages/confirmation'
+import Confirmation from './pages/Confirm'
 import ProtectedRoute from './components/ProtectedRoute'
 
 function App() {
