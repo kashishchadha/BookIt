@@ -62,6 +62,29 @@
 
 ---
 
+## 📸 Screenshots
+
+<div align="center">
+
+### 🏠 Home
+<img src="./Screenshots/Home.png" alt="BookIt Homepage" width="800" />
+
+### ✍️ Details
+<img src="./Screenshots/Details.png" alt="Details Page" width="800" />
+
+### 📖 Checkout 
+<img src="./Screenshots/Checkout.png" alt="Checkout Page" width="800" />
+
+### 📱 Confirmation
+<img src="./Screenshots/Confirmation.png" alt="Confirmationn" width="800" />
+
+
+
+
+</div>
+
+---
+
 ## 🛠️ Tech Stack
 
 <div align="center">
