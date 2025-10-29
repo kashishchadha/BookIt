@@ -7,7 +7,14 @@ import promoRouter from './routes/promo.js'
 
 const app = express()
 
-app.use(cors())
+// CORS configuration - allow only frontend URL
+const corsOptions = {
+  origin: process.env.APP_URL || 'http://localhost:5173',
+  credentials: true,
+  optionsSuccessStatus: 200
+}
+
+app.use(cors(corsOptions))
 app.use(express.json())
 
 app.use('/api/experiences', experiencesRouter)
