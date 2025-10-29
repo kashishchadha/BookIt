@@ -2,10 +2,13 @@
 import './App.css'
 import Navbar from './components/Navbar'
 import Card from './components/Card'
-import {BrowserRouter,Route,Routes} from  "react-router"
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import MainPage from './pages/MainPage'
 import MainLayout from './components/MainLayout'
 import Details from './pages/Details'
+import Checkout from './pages/Checkout'
+import Confirmation from './pages/confirmation'
+import ProtectedRoute from './components/ProtectedRoute'
 
 function App() {
 
@@ -15,7 +18,10 @@ function App() {
     <Routes>
       <Route element={<MainLayout/>}>
       <Route path="/" element={<MainPage/>}/>
-      <Route path="/details" element={<Details/>}/>
+      <Route path="/details/:id" element={<Details/>}/>
+  <Route path="/checkout" element={<Checkout/>}/>
+  <Route path="/confirmation" element={<ProtectedRoute><Confirmation/></ProtectedRoute>}/>
+    
     
     </Route>
              

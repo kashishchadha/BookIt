@@ -1,16 +1,21 @@
-import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const Card = ({
+	id,
 	image,
 	title = 'Nandi Hills Sunrise',
 	location = 'Bangalore',
 	description = 'Curated small-group experience. Certified guide. Safety first with gear included.',
-	price = '₹899',
-	onView = () => {}
+	price = 899,
 }) => {
+	const navigate = useNavigate()
+
+	const handleViewDetails = () => {
+		navigate(`/details/${id}`)
+	}
+
 	return (
 		<article className="max-w-xs bg-white rounded-2xl shadow-md overflow-hidden">
-			{/* image */}
 			{image ? (
 				<img src={image} alt={title} className="w-full h-48 object-cover" />
 					) : (
@@ -28,11 +33,11 @@ const Card = ({
 				<div className="mt-4 flex items-center justify-between">
 					<div className='flex justify-center items-center gap-2'>
 						<p className="text-xs text-gray-500">From</p>
-						<p className="text-lg font-semibold text-gray-900">{price}</p>
+						<p className="text-lg font-semibold text-gray-900">₹{price}</p>
 					</div>
 
 					<button
-						onClick={onView}
+						onClick={handleViewDetails}
 						className="bg-yellow-400 hover:bg-yellow-500 text-black text-sm px-2.5 py-1 rounded-md shadow-sm"
 					>
 						View Details
